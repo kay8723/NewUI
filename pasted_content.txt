@@ -1,0 +1,148 @@
+Ah, got it — you're asking for a complete **screen blueprint** for the entire **Nyra desktop AI assistant**, not just the MCP feature. Here's a structured breakdown of all the screens and their purpose in the final Electron-based app:
+
+---
+
+## 🧭 Full UI/UX Screen Map for Nyra – Your Mind’s Mirror
+
+These are the **core app screens** and **modular panels** that form the full experience:
+
+---
+
+### 🔹 1. **Home / Welcome Screen**
+
+**Purpose:** First-time user landing screen or daily overview
+
+| Component            | Features                                 |
+| -------------------- | ---------------------------------------- |
+| Welcome banner       | Greeting with time-of-day awareness      |
+| Avatar / Nyra bubble | Visual identity for Nyra                 |
+| Quick actions        | “Ask something”, “Start a routine”, etc. |
+| Suggested queries    | GPT-style starter prompts                |
+| Status widgets       | Calendar, weather, tasks, etc.           |
+
+---
+
+### 🔹 2. **Chat Interface (Core AI Interaction Screen)**
+
+**Purpose:** Primary place for user input and Nyra responses
+
+| Component             | Features                                   |
+| --------------------- | ------------------------------------------ |
+| Chat history pane     | Scrollable conversation feed               |
+| Input bar             | Text, mic button, file/voice upload        |
+| Live token stream     | Real-time streaming of responses           |
+| Skill/plugin renderer | Inserted cards (calendar, map, code, etc.) |
+| MCP trace display     | Optionally shows tool reasoning path       |
+
+---
+
+### 🔹 3. **Voice Overlay (Floating Assistant)**
+
+**Purpose:** Voice-first assistant window (triggered via wake word or button)
+
+| Component               | Features                            |
+| ----------------------- | ----------------------------------- |
+| Microphone button       | Toggle listen state with waveform   |
+| STT engine indicator    | Whisper/Google/etc.                 |
+| Response summary bubble | AI-generated answer in brief        |
+| Hotword toggle          | Enable/disable “Hey Nyra” wake word |
+
+---
+
+### 🔹 4. **Settings Screen**
+
+**Purpose:** Central hub for configuring everything
+
+| Tabs / Sections     | Features                                   |
+| ------------------- | ------------------------------------------ |
+| General             | Language, timezone, dark/light mode        |
+| Appearance          | Theme, glass effect toggle, avatar         |
+| Voice               | STT/TTS engines, wake word, voice style    |
+| LLM                 | Choose GPT/Gemini/Ollama, temp, max tokens |
+| MCP / Agents        | Server URL, auth token, skill routing      |
+| Skills & Extensions | Toggle or install skills                   |
+| Privacy & Logs      | Telemetry, history toggle, clear memory    |
+
+---
+
+### 🔹 5. **Skill Marketplace**
+
+**Purpose:** Installable Leon/Nyra skill hub
+
+| Feature                  | Description                            |
+| ------------------------ | -------------------------------------- |
+| Browse by category       | e.g., productivity, fun, dev, voice    |
+| Install / uninstall      | With status badges                     |
+| Ratings and last updated | Show skill health                      |
+| Skill settings inline    | Enable config directly inside the card |
+
+---
+
+### 🔹 6. **Memory / Knowledge Vault**
+
+**Purpose:** Persistent memory manager ("mind mirror")
+
+| Feature                 | Description                         |
+| ----------------------- | ----------------------------------- |
+| Timeline view           | Log of conversations or events      |
+| Search & filter         | Semantic or tag-based memory recall |
+| Add/edit notes manually | “Remember this” functionality       |
+| Export / import memory  | As markdown, JSON, etc.             |
+
+---
+
+### 🔹 7. **Flow Designer / Agent Workflow (Advanced)**
+
+**Purpose:** Design automation pipelines and multi-tool agents
+
+| Feature                    | Description                         |
+| -------------------------- | ----------------------------------- |
+| Node-based visual builder  | Drag/drop ReAct-style steps         |
+| Toolchain debugger         | Test tool paths and data flows      |
+| Save/load flows as presets | “Morning routine”, “Research agent” |
+
+---
+
+### 🔹 8. **Developer / Debug Tools**
+
+**Purpose:** Test prompts, tools, skill APIs, logs
+
+| Feature                 | Description                                |
+| ----------------------- | ------------------------------------------ |
+| Prompt tester           | Like OpenAI Playground                     |
+| Skill call debugger     | Show input/output logs for each invocation |
+| Server logs / inspector | View stdout from Leon or local LLMs        |
+| MCP visual trace        | Highlight multi-hop tool calling           |
+
+---
+
+### 🔹 9. **Notifications / System Tray Panel**
+
+**Purpose:** Quick glance UI for messages, status, tasks
+
+| Feature              | Description                    |
+| -------------------- | ------------------------------ |
+| Background summaries | Nyra-generated daily notes     |
+| Task reminders       | Voice or skill-triggered tasks |
+| Status monitor       | MCP, LLMs, server health       |
+
+---
+
+## 🧱 Suggested Layout for Electron App
+
+```plaintext
+- /app         → Vite + React frontend (screens above)
+- /main        → Electron bootstrap + config
+- /resources   → Leon backend (server/client/binaries)
+- /skills      → Leon/Nyra custom skills (e.g., MCP connector)
+```
+
+---
+
+Would you like me to generate:
+
+* A **wireframe or Figma-style mockup** of these screens?
+* A full **React route-based app layout** scaffold for this structure?
+* A `routes.tsx` + layout page + component split example?
+
+You’re super close to product-level territory — let’s bring Nyra fully to life.

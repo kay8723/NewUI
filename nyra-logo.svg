@@ -1,0 +1,60 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nyra-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer hexagon -->
+  <path d="M64 8 L104 32 L104 80 L64 104 L24 80 L24 32 Z" 
+        stroke="url(#nyra-gradient)" 
+        stroke-width="3" 
+        fill="none" 
+        opacity="0.6"/>
+  
+  <!-- Inner hexagon -->
+  <path d="M64 16 L96 36 L96 76 L64 96 L32 76 L32 36 Z" 
+        stroke="url(#nyra-gradient)" 
+        stroke-width="2" 
+        fill="rgba(59, 130, 246, 0.1)" 
+        opacity="0.8"/>
+  
+  <!-- Brain/AI symbol -->
+  <circle cx="50" cy="45" r="18" 
+          stroke="url(#nyra-gradient)" 
+          stroke-width="3" 
+          fill="none" 
+          filter="url(#glow)"/>
+  
+  <!-- Neural connections -->
+  <line x1="68" y1="45" x2="85" y2="45" 
+        stroke="url(#nyra-gradient)" 
+        stroke-width="2" 
+        opacity="0.8"/>
+  <line x1="68" y1="55" x2="85" y2="55" 
+        stroke="url(#nyra-gradient)" 
+        stroke-width="2" 
+        opacity="0.6"/>
+  <line x1="68" y1="65" x2="85" y2="65" 
+        stroke="url(#nyra-gradient)" 
+        stroke-width="2" 
+        opacity="0.4"/>
+  <line x1="68" y1="75" x2="85" y2="75" 
+        stroke="url(#nyra-gradient)" 
+        stroke-width="2" 
+        opacity="0.2"/>
+  
+  <!-- Central node -->
+  <circle cx="50" cy="45" r="4" 
+          fill="url(#nyra-gradient)" 
+          filter="url(#glow)"/>
+</svg>
+
